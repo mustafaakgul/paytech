@@ -1,0 +1,30 @@
+## Saved results in .idea folder in project root
+
+### GET request with a header
+GET http://localhost:8081/api/v1/users
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0OTkyNTcxMywiZXhwIjoxNzQ5OTYxNzEzfQ.KPPdxotFj88H90YKc73TRWSWRu7rTqnF-LhX5vrMnCUInn66B6hqr8oJo8Tm92g--O7S8l4awkuNI6xBvW-AlA
+
+### Create Account
+POST http://localhost:8081/api/v1/accounts
+Content-Type: application/json
+
+{
+  "name": "acc1",
+  "description": "accdes",
+  "currency": "tl",
+  "balance": 150.00,
+  "type": "CASH"
+}
+
+### Get Accounts
+GET http://localhost:8081/api/v1/accounts
+Content-Type: application/json
+
+### Get Accounts
+GET http://localhost:8081/api/v1/accounts/1
+Content-Type: application/json
+
+### Get Accounts
+GET http://localhost:8081/api/v1/accounts/test
+Content-Type: application/json
