@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "e079656b-8b8e-45e7-bd54-82bce4feaf1a",
+		"name": "FinTech.paytech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14931585"
+	},
+	"item": [
+		{
+			"name": "Get Accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"description\": \"des\",\n    \"assignee\": \"htc\",\n    \"targetDate\": \"2025-04-27\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "URL Authenticated",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXN0YWZhQGVtYWlsLmNvbSIsImlhdCI6MTc1MTExMDY2OSwiZXhwIjoxNzUxMTQ2NjY5fQ.cDCWGmWo_DJlK7c8MKO-RmiFySSfNwg5b6WeqnwICZMei3GaMwBFnKHYaZalp0qWfssAvVDCLojkpMji5H9iFw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Accounts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXN0YWZAZW1haWwuY29tIiwiaWF0IjoxNzUxNDg1NjEyLCJleHAiOjE3NTE1MjE2MTJ9.S-obEblvIfhlfXsoQ_8IHpYbnImb8xqdvdd9Ym3fbLEFPEZ0nFtegPVJzmjKufBi7g3Holr5PmJm5lObzYUvuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mus\",\n    \"description\": \"des\",\n    \"currency\": \"tr\",\n    \"balance\": 0,\n    \"type\": \"CASH\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mustaf@email.com\",\n    \"password\": \"sifre123A!\",\n    \"firstName\": \"mustafa\",\n    \"lastName\": \"akgul\",\n    \"username\": \"mustafaakgul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mustaf@email.com\",\n    \"password\": \"sifre123A!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXN0YWZAZW1haWwuY29tIiwiaWF0IjoxNzUxMTkzODA5LCJleHAiOjE3NTEyMjk4MDl9.TO_aatKWgtc1cPDhLUAOuzHRWwRwhT3XQVkZl6TjBT_uo9j3bY2T-Xg07ZvKD6RyVzHIlrQp1RjQc2gQ2PvyRw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"description\": \"des\",\n    \"assignee\": \"htc\",\n    \"targetDate\": \"2025-04-27\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/transactions/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtdXN0YWZAZW1haWwuY29tIiwiaWF0IjoxNzUxMTkzOTk0LCJleHAiOjE3NTEyMjk5OTR9.LL3anuwUNSKEdHl4CyVajlgpebcGm7Vdf-NprdU3m1quLNAa9eXSK5n5DVGzCjqYRsPRZQTGBbAvh65C73cOOQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"gider1\",\n    \"currency\": \"tr\",\n    \"amount\": 105,\n    \"transactionType\": \"EXPENSE\",\n    \"transactionSubType\": \"TRANSPORT\",\n    \"date\": \"2025-04-27\",\n    \"accountId\": 1    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Dev",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mustafa2@gmail.com\",\n    \"password\": \"alala123A\",\n    \"firstName\": \"mustafa\",\n    \"lastName\": \"akgul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://darbetigh-fintech-paytech-fa52f728dbb5.herokuapp.com/api/v1/auth/register",
+					"protocol": "https",
+					"host": [
+						"darbetigh-fintech-paytech-fa52f728dbb5",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
